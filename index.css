@@ -19,9 +19,9 @@ body{
     width:max-content;
 } */
 .profile{
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     /* background-color: black; */
-    border-radius: 7px;
+    border-radius: 10px;
     color: white;
     padding: 50px;
     width: max-content;
