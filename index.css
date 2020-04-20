@@ -8,7 +8,8 @@ h4{
 /* css 적용 우선순위 */
 body{
     background-image: url("img/bg.jpg");
-    background-size: 100%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 /* div{
