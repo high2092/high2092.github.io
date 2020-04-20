@@ -5,7 +5,7 @@
 h4{
     color: rosybrown;
 }
-/* css Àû¿ë ¿ì¼±¼øÀ§ */
+/* css ì ìš© ìš°ì„ ìˆœìœ„ */
 body{
     background-image: url("img/bg.jpg");
     background-size: 100%; 
@@ -24,13 +24,20 @@ body{
     color: white;
     padding: 50px;
     width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: auto;
     margin-top: 100px;
 }
 .profile .prfimg{
-    border-radius: 50%;
+    border-radius: 5%;
+    display: inline-block;
+    width: 240px;
+    /* height: 240px; */
 }
-.content{
+.content{ 
+    margin-top: 30px;
     margin-left: 30px;
     /* background-color: black; */
     padding: 20px;
@@ -62,8 +69,8 @@ a{
 .content .univ{
     margin-bottom: 30px;
 }
+
 .content .link{
-    /* font-size: 10px; */
     margin-top: 40px;
 }
 *{
