@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>profile</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <title>paper</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <style>
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+    *{
+      font-family: 'Ubuntu Mono', sans-serif;
+      margin: 0px;
+      padding: 0px;
+    }
+    body{
+      background-image: url("https://user-images.githubusercontent.com/55306894/79606353-6f0eb380-812c-11ea-8983-ab4e092d10d2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #terminal{
+      background-color: rgb(48,10,36);
+      color: rgb(211,215,207);
+      /* padding-right: 200px; */
+      padding-bottom: 200px;
+      width: max-content;
+      /* margin-top: 50px; */
+      text-align: left;
+      border-radius: 7px;
+      position: absolute;
+      top: 100px;
+      left: 300px;
+    }
+    #bar{
+      background-color: rgb(66,66,66);
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      /* padding-right: 0px; */
+      width: 600px;
+      height: 21px;
+      /* */
+      text-align: center;
+      color: rgb(211,215,207);
+      font-weight: bold;
+    }
 
-    <body>
-        <div class="profile">
-            <img class="prfimg" src="img/profile.jpg" alt="profile">
-            <div class="content">
-                <h2>하현우</h2>
-                <h4>"안녕하세요!"</h4>
-                <h3 class="univ">Hanyang Univ.
-                    <span style="color: rgb(67, 142, 197)">E</span><span style="color: rgb(117, 151, 39)">R</span><span style="color: rgb(252, 165, 68)">I</span><span style="color: rgb(255, 207, 108)">C</span><span style="color: rgb(215, 40, 47)">A</span>
-                </h3>
-                <ul>
-                    <li>도화지 같은 사람</li>
-                </ul>
-                <p class="info">
-                    <h3><img src="img/birth.png" width="16px"> &nbsp;2000. 9. 2</h3>
-                    <!-- <h3><img src="img/callnumber.png" width="16px"> &nbsp;010-4098-2836</h3> -->
-                    <h3><img src="img/address.png" width="16px"> &nbsp;경기도 용인시</h3>
-                    <h3><img src="img/email.png" width="16px"> &nbsp;high092@naver.com</h3>
-                </p>
-                <p class="link"> 
-                    <a href="https://github.com/high2092" target="_blank">Github</a>
-                    <a href="https://www.facebook.com/profile.php?id=100008083358584" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/hhyuw/?hl=ko" target="_blank">Instagram</a>
-                </p>
-                <br><br>
-            </div>
-        </div>
+    #x{
+      text-align: right;
+    }
+    #hi{
+      color: rgb(211,215,207);
+    }
+    #cursor{
+      font-weight:900;
+      color: white;
+    }
+
+    .icons{
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .icon{
+      margin: 30px;
+      color: white;
+      display: inline-block;
+    }
+    .property{
+      color: rgb(138,226,52);
+      font-weight: bold;
+    }
+
+    .content{
+      color: rgb(114,159,207);
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .hide{
+      opacity: 0;
+    }
+  </style>
+  <body>
+    <div class="icons">
+      <div class="icon">
+        <a href="profile.html" target="_blank">
+          <img src="https://user-images.githubusercontent.com/55306894/79606341-6c13c300-812c-11ea-8c05-95befadf1bc8.png" width="40px">
+        </a>
+        <br><span style="font-size: 1px;">　</span>hhw
+      </div>
+    </div>
+      <div id="terminal">
+          <div id="bar">hhyuw: ~ </div>
+          <div id="hi">
+            Hi! This is personal site of next user: <span style="color: white">hhyuw</span><br>
+            See below for details.<br><br>
+          </div>
+        <span class="property">hhyuw@Name: </span> <span class="content"> Hyunwoo Ha </span><br>
+        <span class="property">hhyuw@Student-ID: </span> <span class="content"> 2019036844 </span><br>
+        <span class="property">hhyuw@Education: </span> <span class="content"> Hanyang University ERICA </span><br>
+        <span class="property">hhyuw@Major: </span> <span class="content"> Computer Science </span><br>
+        <span class="property">hhyuw@E-mail: </span> <span class="content"> high2092@gmail.com</span><span id="cursor">_</span><br>
+      </div>
+    </div>
+  </body>
+  <script>
+    function blink(){
+      let cursor = document.querySelector("#cursor");
+      cursor.classList.toggle("hide");
+    }
+    setInterval(blink, 650);
+  </script>
 </html>

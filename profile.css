@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
+/* h1{
+    color: rgb(150, 213, 102);
+} */
+h4{
+    color: rosybrown;
+}
+/* css 적용 우선순위 */
+body{
+    background-image: url("img/bg.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+/* div{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    width:max-content;
+} */
+.profile{
+    background-color: rgba(0,0,0,0.6);
+    /* background-color: black; */
+    border-radius: 10px;
+    color: white;
+    padding: 50px;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-top: 200px;
+}
+.profile .prfimg{
+    border-radius: 5%;
+    display: inline-block;
+    width: 240px;
+}
+.content{ 
+    margin-top: 30px;
+    margin-left: 30px;
+    /* background-color: black; */
+    padding: 20px;
+    display: inline-block;
+}
+a{
+    color: brown;
+    text-decoration: none;
+}
+.content h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.content h4{
+    margin-bottom: 7px;
+    margin-left: 100px;
+}
+.content ul{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+/* .content .info h3{
+    font-size: 20px;
+} */
+.content h3{
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+.content .univ{
+    margin-bottom: 30px;
+}
+
+.content .link{
+    margin-top: 40px;
+}
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
