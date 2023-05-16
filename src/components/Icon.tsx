@@ -9,8 +9,8 @@ interface IconSectionProps {
 export function IconSection({ icons }: IconSectionProps) {
   return (
     <S.IconSection>
-      {icons.map((icon) => (
-        <Icon {...icon} />
+      {icons.map((icon, idx) => (
+        <Icon key={`icon-${idx}`} {...icon} />
       ))}
     </S.IconSection>
   );
