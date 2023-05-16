@@ -29,16 +29,17 @@ interface InfoRowProps {
 }
 export function InfoRow({ attributeName, value, cursor }: InfoRowProps) {
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ paddingRight: '0.5rem', color: 'rgb(138, 226, 52)' }}>{`${USERNAME}@${attributeName}:`}</div>
-      <div style={{ color: 'rgb(114, 159, 207)' }}>{value}</div>
-      {cursor && <div style={{ color: 'white' }}>{'_'}</div>}
+    <div style={{ wordBreak: 'break-all' }}>
+      <span style={{ paddingRight: '0.5rem', color: 'rgb(138, 226, 52)' }}>{`${USERNAME}@${attributeName}:`}</span>
+      <span style={{ color: 'rgb(114, 159, 207)' }}>{value}</span>
+      {cursor && <span style={{ color: 'white' }}>{'_'}</span>}
     </div>
   );
 }
 
 export function Prompt() {
   const [showCursor, setShowCursor] = useState(false);
+  const [promptStyleProps, setPromptStyleProps] = useState({ top: 0, left: 0, width: 0, height: 0 });
 
   useEffect(() => {
     const handle = setInterval(() => {
@@ -48,8 +49,17 @@ export function Prompt() {
     return () => clearInterval(handle);
   }, []);
 
+  useEffect(() => {
+    setPromptStyleProps({
+      top: window.innerHeight * (0.2 + Math.random() * 0.2),
+      left: window.innerWidth * (0.2 + Math.random() * 0.2),
+      width: window.innerWidth * 0.6,
+      height: window.innerHeight * 0.6,
+    });
+  }, []);
+
   return (
-    <S.Prompt top="10rem" left="20rem">
+    <S.Prompt {...promptStyleProps}>
       <TopBar />
       <div>
         <GreetingText />

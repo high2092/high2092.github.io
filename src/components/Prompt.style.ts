@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-export const Prompt = styled.div<{ top: string; left: string }>`
+export const Prompt = styled.div<{ top: number; left: number; width: number; height: number }>`
   position: absolute;
-  top: ${({ top }) => top};
-  left: ${({ left }) => left};
+  top: ${({ top }) => top}px;
+  left: ${({ left }) => left}px;
+  width: ${({ width }) => width}px;
+  height: ${({ height }) => height}px;
 
-  width: 35rem;
-  height: 20rem;
   background: rgb(48, 10, 36);
   border-radius: 0.4rem;
 
