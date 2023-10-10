@@ -16,7 +16,7 @@ export function TopBar() {
 export function GreetingText() {
   return (
     <S.GreetingText>
-      <div>{`Hi! This is personal site of next user: hhyuw`}</div>
+      <div>{`Hi! This is personal site of the following user: hhyuw`}</div>
       <div>{`See below for details.`}</div>
     </S.GreetingText>
   );
