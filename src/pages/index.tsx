@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { IconSection } from '../components/Icon';
 import { Prompt } from '../components/Prompt';
 import { ELIXIR_ICON_IMAGE_URL, MAPLE_SCOUTER_ICON_IMAGE_URL, MOZ_ICON_IMAGE_URL, MUSIC_NODE_ICON_IMAGE_URL, TRANSCENDENCE_ICON_IMAGE_URL } from '../constants/imageUrl';
@@ -13,10 +14,15 @@ const icons: IconProps[] = [
 
 function Home() {
   return (
-    <S.Home>
-      <IconSection icons={icons} />
-      <Prompt />
-    </S.Home>
+    <>
+      <Head>
+        <title>{'hhyuw@homepage'}</title>
+      </Head>
+      <S.Home>
+        <IconSection icons={icons} />
+        <Prompt />
+      </S.Home>
+    </>
   );
 }
 
